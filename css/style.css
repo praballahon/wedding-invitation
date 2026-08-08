@@ -1213,7 +1213,7 @@ img {
     object-fit: contain;
 
     animation:
-        launchImageIn 1s
+        launchImageIn 1.5s
         cubic-bezier(.22,1,.36,1)
         forwards;
 
