@@ -43,7 +43,7 @@ revealElements.forEach(el => {
    PARALLAX BACKGROUND
 ========================================== */
 
-const flowers = document.querySelector(".top-flowers");
+/*const flowers = document.querySelector(".top-flowers");
 const leftLeaf = document.querySelector(".left-leaf");
 const rightLeaf = document.querySelector(".right-decoration");
 
@@ -63,7 +63,7 @@ window.addEventListener("scroll", () => {
         rightLeaf.style.transform =
             `translateY(${scroll * 0.08}px)`;
 
-});
+});*/
 
 
 /* ==========================================

@@ -31,7 +31,7 @@
     layer.setAttribute("aria-hidden", "true");
     document.body.appendChild(layer);
 
-    for (let index = 0; index < 22; index += 1) {
+    /*for (let index = 0; index < 22; index += 1) {
       const particle = document.createElement("span");
       const isPetal = index % 5 === 0;
       particle.className = isPetal ? "flower-petal" : "gold-particle";
@@ -40,7 +40,7 @@
       particle.style.animationDelay = `${Math.random() * -18}s`;
       particle.style.setProperty("--drift", `${Math.random() * 80 - 40}px`);
       layer.appendChild(particle);
-    }
+    }*/
 
     /*for (let index = 0; index < 7; index += 1) {
       const leaf = document.createElement("span");
