@@ -17,8 +17,8 @@
         let volume = 0;
         const fade = setInterval(() => {
             volume += 0.05;
-            if (volume >= 0.3) {
-                volume = 0.3;
+            if (volume >= 0.5) {
+                volume = 0.5;
                 clearInterval(fade);
             }
             audio.volume = volume;
@@ -66,7 +66,7 @@
         if(!playing) {
             audio.load();
             audio.oncanplaythrough = () => {
-                audio.volume = 0.3;
+                audio.volume = 0.5;
 
                 audio.play().then(() => {
                     playing = true;
