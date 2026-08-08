@@ -524,8 +524,8 @@
     }
 
     .poem-text {
-        width: min(405px, 58vw);
-        font-size: .70rem;
+        width: min(420px, 65vw);
+        font-size: .75rem;
 
         line-height: 1.75;
         margin: 20px auto 0;
