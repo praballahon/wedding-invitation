@@ -1,4 +1,4 @@
-const CACHE_NAME = "wedding-invitation-v5";
+const CACHE_NAME = "wedding-invitation-v6";
 const CORE_ASSETS = [
   "index.html",
 
@@ -25,6 +25,7 @@ const CORE_ASSETS = [
   "assets/images/top-flowers.png"
   "assets/images/wedding_mondop.png"
   "assets/images/reception_mondop.png"
+  "assets/images/duo_cover_image_squire.png"
 ];
 
 self.addEventListener("install", (event) => {
