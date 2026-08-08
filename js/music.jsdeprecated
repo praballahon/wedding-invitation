@@ -1,0 +1,223 @@
+/* ==========================================
+   BACKGROUND MUSIC
+========================================== */
+
+const music = new Audio("assets/audio/theme2_alokhua.mp3");
+music.load();
+
+music.loop = true;
+music.volume = 0;
+
+const musicBtn = document.createElement("button");
+
+musicBtn.className = "music-btn";
+
+musicBtn.innerHTML = "♪";
+
+document.body.appendChild(musicBtn);
+
+let playing = false;
+
+/* ==========================================
+   Fade Functions
+========================================== */
+
+function fadeInMusic() {
+
+    music.play();
+
+    let volume = 0;
+
+    const fade = setInterval(() => {
+
+        volume += 0.05;
+
+        if (volume >= 0.5) {
+
+            volume = 0.5;
+
+            clearInterval(fade);
+
+        }
+
+        music.volume = volume;
+
+    }, 120);
+
+}
+
+function fadeOutMusic() {
+
+    let volume = music.volume;
+
+    const fade = setInterval(() => {
+
+        volume -= 0.05;
+
+        if (volume <= 0) {
+
+            music.pause();
+
+            music.currentTime = 0;
+
+            clearInterval(fade);
+
+            volume = 0;
+
+        }
+
+        music.volume = volume;
+
+    }, 100);
+
+}
+
+/* ==========================================
+   Button Click
+========================================== */
+
+musicBtn.addEventListener("click", () => {
+
+    if (playing) {
+
+        fadeOutMusic();
+
+        musicBtn.classList.remove("playing");
+
+        localStorage.setItem("music", "off");
+
+    } else {
+
+        fadeInMusic();
+
+        musicBtn.classList.add("playing");
+
+        localStorage.setItem("music", "on");
+
+    }
+
+    playing = !playing;
+
+});
+
+/* ==========================================
+   Browser Autoplay Policy
+========================================== */
+
+function startMusic() {
+
+    if (localStorage.getItem("music") !== "on") return;
+
+    if (!playing) {
+
+        fadeInMusic();
+
+        playing = true;
+
+        musicBtn.classList.add("playing");
+
+    }
+
+    window.removeEventListener("click", startMusic);
+
+}
+
+window.addEventListener("click", startMusic);
+
+/* ==========================================
+   Restore Previous State
+========================================== */
+
+window.addEventListener("load", () => {
+
+    if (localStorage.getItem("music") === "on") {
+
+        musicBtn.classList.add("playing");
+
+    }
+
+
+    //audio.volume = 0;
+    
+    function fadeInAudio(duration = 3000) {
+      music.load();
+      music.oncanplaythrough = () => {
+        music.play().catch(console.error);
+        button.textContent = "Ⅱ";
+        button.setAttribute("aria-label", "Pause music");
+        const targetVolume = 0.6;
+        const interval = 50; // ms
+        const step = targetVolume / (duration / interval);
+    
+        const fade = setInterval(() => {
+            if (music.volume + step >= targetVolume) {
+                music.volume = targetVolume;
+                clearInterval(fade);
+            } else {
+                music.volume += step;
+            }
+        }, interval);
+      }
+    }
+
+    function isPlaying(audio) {
+      return (
+          audio.currentTime > 0 &&
+          !audio.paused &&
+          !audio.ended &&
+          audio.readyState > 2
+      );
+  }
+
+    function playMusic() {
+      music.load();
+          music.oncanplaythrough = () => {
+          music.volume = 0.6;
+
+          music.play().then(() => {
+            button.textContent = "Ⅱ";
+            button.setAttribute("aria-label", "Pause music");
+          }).catch(() => {
+            //alert("could not play music");
+          });
+
+          /*setTimeout(() => {
+            music.play().catch(console.error);
+          }, 3000);
+          button.textContent = "Ⅱ";
+          button.setAttribute("aria-label", "Pause music");*/
+        }
+    }
+
+    function playAutoMusic() {
+        //fadeInAudio(3000); // Fade in over 3 seconds
+        if (playing) {
+
+            fadeOutMusic();
+
+            musicBtn.classList.remove("playing");
+
+            localStorage.setItem("music", "off");
+
+        } else {
+            music.load();
+            music.oncanplaythrough = () => {
+                //fadeInMusic();
+                music.play().then(() => {
+                    musicBtn.classList.add("playing");
+                    localStorage.setItem("music", "on");
+                    playing = !playing;
+                    document.removeEventListener("pointerdown", playAutoMusic);
+                    document.removeEventListener("touchstart", playAutoMusic);
+                }).catch(() => {
+                    alert("could not play audio");
+                });
+            }
+
+        }
+    }
+
+    document.addEventListener("pointerdown", playAutoMusic);
+    document.addEventListener("touchstart", playAutoMusic);
+
+});

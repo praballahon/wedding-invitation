@@ -1,0 +1,374 @@
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 100vh;
+
+    text-align: center;
+
+}
+
+.hero-content {
+
+    max-width: 900px;
+
+    animation: fadeUp 1.4s ease;
+
+    z-index: 2;
+
+}
+
+/* ------------------------------------------
+   Wedding Invitation
+------------------------------------------- */
+
+.subtitle {
+
+    display: inline-block;
+
+    letter-spacing: .45rem;
+
+    text-transform: uppercase;
+
+    font-size: .9rem;
+
+    color: var(--secondary);
+
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------
+   Couple Names
+------------------------------------------- */
+
+.hero h1 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: clamp(4rem, 9vw, 7rem);
+
+    line-height: .95;
+
+    color: var(--dark);
+
+}
+
+.hero h1 span {
+
+    position: relative;
+
+}
+
+.hero h1 small {
+
+    font-size: 2.2rem;
+
+    color: var(--secondary);
+
+    font-weight: 400;
+
+    font-style: italic;
+
+}
+
+/* ------------------------------------------
+   Tagline
+------------------------------------------- */
+
+.tagline {
+
+    margin-top: 25px;
+
+    font-size: clamp(1.6rem,3vw,2.4rem);
+
+    color: #8f5e39;
+
+    font-style: italic;
+
+}
+
+/* ------------------------------------------
+   Date & Location
+------------------------------------------- */
+
+.hero-info {
+
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    flex-wrap: wrap;
+
+}
+
+.hero-info div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 28px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,.58);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+    transition: .35s;
+
+}
+
+.hero-info div:hover {
+
+    transform: translateY(-6px);
+
+}
+
+.hero-info span {
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+}
+
+/* ------------------------------------------
+   Scroll Down
+------------------------------------------- */
+
+.scroll-down {
+
+    margin-top: 70px;
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #9b7b5b;
+
+    font-size: .9rem;
+
+    letter-spacing: .18rem;
+
+    text-transform: uppercase;
+
+}
+
+.scroll-down::after {
+
+    content: "";
+
+    width: 2px;
+
+    height: 70px;
+
+    background: linear-gradient(
+
+        to bottom,
+
+        #c89c58,
+
+        transparent
+
+    );
+
+    animation: scrollLine 2.2s infinite;
+
+}
+
+/* ------------------------------------------
+   Decorative Line
+------------------------------------------- */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(200,160,90,.2);
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(200,160,90,.1);
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+}
+
+/* ------------------------------------------
+   Highlight
+------------------------------------------- */
+
+.hero h1 span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -10px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--secondary);
+
+    transition: .6s;
+
+    transform: translateX(-50%);
+
+}
+
+.hero h1:hover span::after {
+
+    width: 70%;
+
+}
+
+/* ------------------------------------------
+   Floating Glow
+------------------------------------------- */
+
+.hero-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    background:
+
+    radial-gradient(circle,
+
+        rgba(255,255,255,.35),
+
+        transparent 70%);
+
+    left: 50%;
+
+    top: 45%;
+
+    transform: translate(-50%,-50%);
+
+    z-index: -1;
+
+}
+
+/* ------------------------------------------
+   Fade Animation
+------------------------------------------- */
+
+@keyframes fadeUp {
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ------------------------------------------
+   Scroll Animation
+------------------------------------------- */
+
+@keyframes scrollLine {
+
+    0%{
+
+        opacity:.2;
+
+        transform:scaleY(.4);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scaleY(1);
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+        transform:scaleY(.4);
+
+    }
+
+}

@@ -1,0 +1,670 @@
+/* ==========================================
+   Large Desktop
+========================================== */
+
+@media (max-width:1400px){
+
+    .hero-content{
+
+        max-width:800px;
+
+    }
+
+    .event-card{
+
+        grid-template-columns:380px 1fr;
+
+    }
+    .right-decoration{
+
+        width:20vw;
+
+    }
+
+}
+
+
+/* ==========================================
+   Laptop
+========================================== */
+
+@media (max-width:1200px){
+
+    .hero{
+
+        padding-top:120px;
+
+    }
+
+    .hero h1{
+
+        font-size:clamp(3.5rem,8vw,6rem);
+
+    }
+
+    .hero-info{
+
+        gap:30px;
+
+    }
+
+    .event-card{
+
+        grid-template-columns:340px 1fr;
+
+    }
+
+    .event-left{
+
+        padding:40px;
+
+    }
+
+    .timeline{
+
+        grid-template-columns:1fr;
+
+    }
+    .right-decoration{
+
+        width:30vw;
+
+    }
+
+}
+
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width:992px){
+
+    .events{
+
+        gap:50px;
+
+        padding:80px 0;
+
+    }
+
+    .event-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .event-right{
+
+        order:-1;
+
+        height:380px;
+
+    }
+
+    .expandable{
+
+        grid-column:auto;
+
+    }
+
+    .hero-info{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .hero-info div{
+
+        width:320px;
+
+        justify-content:center;
+
+    }
+
+    .logo{
+
+        width:64px;
+
+        height:64px;
+
+    }
+
+    .menu-btn{
+
+        width:64px;
+
+        height:64px;
+
+    }
+    .right-decoration{
+
+        width:40vw;
+
+    }
+
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width:768px){
+
+    .hero{
+
+        min-height:90vh;
+
+        padding:100px 20px 40px;
+
+    }
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero h1 small{
+
+        font-size:1.5rem;
+
+    }
+
+    .tagline{
+
+        font-size:1.5rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.75rem;
+
+        letter-spacing:.22rem;
+
+    }
+
+    .divider{
+
+        width:120px;
+
+    }
+
+    .hero-info{
+
+        margin-top:35px;
+
+    }
+
+    .hero-info div{
+
+        width:100%;
+
+        padding:16px;
+
+    }
+
+    .scroll-down{
+
+        margin-top:45px;
+
+    }
+
+    .event-left{
+
+        padding:35px 28px;
+
+    }
+
+    .event-left h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .number{
+
+        font-size:3.8rem;
+
+    }
+
+    .expandable h3{
+
+        font-size:1.8rem;
+
+        padding:30px 25px 15px;
+
+    }
+
+    .expandable p{
+
+        padding:0 25px;
+
+    }
+
+    .timeline{
+
+        padding:0 25px 35px;
+
+    }
+
+    .expand-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    footer{
+
+        padding:60px 20px;
+
+    }
+
+    footer h2{
+
+        font-size:1.8rem;
+
+    }
+    .right-decoration{
+
+        width:50vw;
+
+    }
+
+        .menu-close {
+
+        top: 16px;
+
+        right: 16px;
+
+        width: 56px;
+
+        height: 56px;
+
+    }
+
+    .main-menu {
+
+        width: 88%;
+
+    }
+
+    .menu-item {
+
+        grid-template-columns: 45px 1fr 35px;
+
+        padding: 22px 5px;
+
+    }
+
+    .menu-title {
+
+        font-size: 2.5rem;
+
+    }
+
+    .menu-arrow {
+
+        font-size: 1.4rem;
+
+    }
+
+    .panel-close {
+
+        top: 16px;
+
+        right: 16px;
+
+        width: 56px;
+
+        height: 56px;
+
+    }
+
+    .info-content {
+
+        width: 88%;
+
+        padding-top: 130px;
+
+    }
+
+    .info-number {
+
+        top: 100px;
+
+        right: 0;
+
+        font-size: 5rem;
+
+    }
+
+    .info-content h2 {
+
+        font-size: 4rem;
+
+    }
+
+    .story-text {
+
+        font-size: 1.3rem;
+
+    }
+
+    .venue-content h3 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .venue-details {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+    .venue-map {
+
+        height: 250px;
+
+        margin-top: 25px;
+
+        border-radius: 20px;
+
+    }
+
+    .launch-content {
+
+        width: 65vw;
+        max-width: 80px;
+
+    }
+
+    .launch-text {
+
+        bottom: -40px;
+
+        font-size: 1rem;
+
+    }
+
+        .story-panel {
+
+        width: 90%;
+
+    }
+
+    .story-header {
+
+        margin-bottom: 65px;
+
+    }
+
+    .story-intro {
+
+        font-size: 1.25rem;
+
+    }
+
+    .story-timeline {
+
+        gap: 65px;
+
+    }
+
+
+    /* vertical timeline */
+
+    .story-timeline::before {
+
+        left: 22px;
+
+    }
+
+
+    /* all items become one column */
+
+    .story-item,
+    .story-item.reverse {
+
+        display: grid;
+
+        grid-template-columns: 45px 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .story-image,
+    .story-item.reverse .story-image {
+
+        grid-column: 2;
+
+        grid-row: 1;
+
+        width: 100%;
+
+        transform: rotate(0);
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .story-connector {
+
+        grid-column: 1;
+
+        grid-row: 1 / span 2;
+
+        align-self: start;
+
+        padding-top: 10px;
+
+    }
+
+
+    .story-connector span {
+
+        width: 44px;
+
+        height: 44px;
+
+        font-size: 1rem;
+
+    }
+
+
+    .story-content,
+    .story-item.reverse .story-content {
+
+        grid-column: 2;
+
+        grid-row: 2;
+
+        padding: 0 0 0 20px;
+
+    }
+
+
+    .story-content h3 {
+
+        font-size: 2.3rem;
+
+    }
+
+
+    .story-content > p:last-child {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .story-ending {
+
+        margin-top: 70px;
+
+    }
+
+    .hero-poem {
+        width: min(390px, 82vw);
+        margin: 25px auto 0;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .poem-text {
+        width: min(405px, 58vw);
+        font-size: .70rem;
+
+        line-height: 1.75;
+        margin: 20px auto 0;
+        padding: 1px;
+        text-align: center;
+
+    }
+
+    .poem-title {
+
+        font-size: 1.15rem;
+
+        margin-bottom: 14px;
+
+    }
+}
+
+
+/* ==========================================
+   Small Phones
+========================================== */
+
+@media (max-width:576px){
+
+    .hero h1{
+
+        font-size:2.6rem;
+
+    }
+
+    .tagline{
+
+        font-size:1.25rem;
+
+    }
+
+    .logo{
+
+        left:16px;
+
+        top:16px;
+
+        width:56px;
+
+        height:56px;
+
+        font-size:1.3rem;
+
+    }
+
+    .menu-btn{
+
+        right:16px;
+
+        top:16px;
+
+        width:56px;
+
+        height:56px;
+
+        font-size:1.5rem;
+
+    }
+
+    .event-left{
+
+        padding:28px 22px;
+
+    }
+
+    .event-right{
+
+        height:260px;
+
+    }
+
+    .timeline div{
+
+        padding:18px;
+
+        font-size:.9rem;
+
+    }
+
+    .top-flowers{
+
+        width:140%;
+
+    }
+
+    .left-leaf{
+
+        width:150px;
+
+    }
+
+    .right-decoration{
+
+        width:60vw;
+
+    }
+
+}
+
+
+/* ==========================================
+   Very Small Devices
+========================================== */
+
+@media (max-width:380px){
+
+    .hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .tagline{
+
+        font-size:1.1rem;
+
+    }
+
+    .hero-info div{
+
+        font-size:.85rem;
+
+    }
+
+    .event-left h2{
+
+        font-size:2rem;
+
+    }
+
+    .expand-btn{
+
+        padding:14px 20px;
+
+    }
+
+}

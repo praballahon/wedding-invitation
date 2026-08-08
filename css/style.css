@@ -1,0 +1,1872 @@
+/* ==========================================
+   RESET
+========================================== */
+@import url("colors.css");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: #f8f2ea;
+
+    color: #4a2c18;
+
+    font-family: "Poppins", sans-serif;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+/* ==========================================
+   COLORS
+========================================== */
+
+:root {
+
+    --primary: #8a5b33;
+
+    --secondary: #c79a52;
+
+    --dark: #4a2c18;
+
+    --paper: #fffaf4;
+
+    --card: rgba(255,255,255,.72);
+
+    --shadow: rgba(77,53,32,.18);
+
+    --border: rgba(255,255,255,.6);
+
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,
+h2,
+h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 600;
+
+}
+
+.subtitle {
+
+    font-family: "Cinzel", serif;
+
+    text-transform: uppercase;
+
+    letter-spacing: .35rem;
+
+    color: var(--secondary);
+
+    font-size: .95rem;
+
+}
+
+.tagline {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin-top: 1rem;
+
+    color: var(--dark);
+
+}
+
+p {
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(circle at top,
+            rgba(255,255,255,.85),
+            rgba(248,242,234,.95)),
+
+        url("../assets/images/paper-texture.jpg");
+
+    background-size: cover;
+
+    opacity: .95;
+
+    z-index: -3;
+
+}
+
+/* soft glow */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(255,255,255,.15),
+            transparent 70%);
+
+    pointer-events: none;
+
+    z-index: -2;
+
+}
+
+/* ==========================================
+   DECORATIONS
+========================================== */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+}
+
+.top-flowers {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 100%;
+
+    transform: translateX(-50%);
+
+}
+
+.left-leaf {
+
+    position: absolute;
+
+    top: 1%;
+
+    left: -1%;
+
+    width: 240px;
+
+}
+
+.right-decoration {
+
+    position: absolute;
+
+    bottom: 1%;
+
+    right: 0;
+
+    width: min(50vw, 400px);
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+
+    position: fixed;
+
+    top: 30px;
+
+    left: 35px;
+
+    width: 72px;
+
+    height: 72px;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #b3281f,
+        #7b130d
+    );
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    font-family: "Cormorant Garamond", serif;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.18);
+
+    transition: .4s;
+
+    z-index: 100;
+}
+
+.logo:hover {
+
+    transform: scale(1.08);
+
+}
+
+/* ==========================================
+   MENU BUTTON
+========================================== */
+
+.menu-btn {
+
+    position: fixed;
+
+    top: 30px;
+
+    right: 35px;
+
+    width: 72px;
+
+    height: 72px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: rgba(255,255,255,.85);
+
+    backdrop-filter: blur(12px);
+
+    font-size: 2rem;
+
+    color: var(--dark);
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+    transition: .35s;
+
+    z-index: 100;
+}
+
+.menu-btn:hover {
+
+    transform: rotate(90deg);
+
+    background: white;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 100px 30px 60px;
+
+}
+
+.hero-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    text-align: center;
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider {
+
+    width: 170px;
+
+    height: 1px;
+
+    background: var(--secondary);
+
+    margin: 22px auto;
+
+    position: relative;
+
+}
+
+.divider::before {
+
+    content: "❦";
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    top: 50%;
+
+    background: var(--paper);
+
+    color: var(--secondary);
+
+    padding: 0 12px;
+
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+section {
+
+    width: min(1200px,92%);
+
+    margin: auto;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+footer h2 {
+
+    font-size: 2.3rem;
+
+    font-style: italic;
+
+    color: var(--dark);
+
+}
+
+.heart {
+
+    font-size: 2rem;
+
+    margin-top: 20px;
+
+    color: var(--secondary);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button {
+
+    font-family: inherit;
+
+}
+
+button:hover {
+
+    cursor: pointer;
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+/* ==========================================
+   MUSIC BUTTON
+========================================== */
+
+.music-btn{
+
+    position:fixed;
+
+    left:30px;
+
+    bottom:30px;
+
+    width:64px;
+
+    height:64px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.9);
+
+    backdrop-filter:blur(15px);
+
+    color:#8a5b33;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+.music-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+.music-btn.playing{
+
+    animation:musicPulse 2s infinite;
+
+}
+
+@keyframes musicPulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(201,160,86,.5);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 20px rgba(201,160,86,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(201,160,86,0);
+
+    }
+
+}
+
+/* ==========================================
+   MENU OVERLAY
+========================================== */
+
+.menu-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(255, 250, 244, .97);
+
+    backdrop-filter: blur(25px);
+
+    z-index: 900;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .5s ease,
+        visibility .5s ease;
+
+}
+
+.menu-overlay.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* ==========================================
+   MENU CLOSE
+========================================== */
+
+.menu-close {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 35px;
+
+    width: 72px;
+
+    height: 72px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--dark);
+
+    font-size: 2.5rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.12);
+
+    transition: .35s;
+
+}
+
+.menu-close:hover {
+
+    transform: rotate(90deg);
+
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.main-menu {
+
+    width: min(850px, 90%);
+
+}
+
+.menu-label {
+
+    font-family: "Cinzel", serif;
+
+    font-size: .75rem;
+
+    letter-spacing: .3rem;
+
+    color: var(--secondary);
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ==========================================
+   MENU ITEM
+========================================== */
+
+.menu-item {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 50px;
+
+    align-items: center;
+
+    padding: 28px 10px;
+
+    background: none;
+
+    border: none;
+
+    border-bottom: 1px solid rgba(74,44,24,.15);
+
+    color: var(--dark);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+}
+
+.menu-item:hover {
+
+    padding-left: 25px;
+
+    color: #9b6a3d;
+
+}
+
+
+/* number */
+
+.menu-number {
+
+    font-family: "Cinzel", serif;
+
+    font-size: .8rem;
+
+    color: var(--secondary);
+
+}
+
+
+/* title */
+
+.menu-title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    font-weight: 500;
+
+}
+
+
+/* arrow */
+
+.menu-arrow {
+
+    font-size: 1.8rem;
+
+    transition: .4s;
+
+}
+
+.menu-item:hover .menu-arrow {
+
+    transform: translate(7px, -7px);
+
+}
+
+
+/* ==========================================
+   INFO PANEL
+========================================== */
+
+.info-panel {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1100;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            #fffdf9,
+            #f4eadf
+        );
+
+    overflow-y: auto;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .5s ease,
+        transform .6s ease,
+        visibility .5s;
+
+}
+
+.info-panel.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+/* ==========================================
+   PANEL CLOSE
+========================================== */
+
+.panel-close {
+
+    position: fixed;
+
+    top: 30px;
+
+    right: 35px;
+
+    width: 64px;
+
+    height: 64px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.85);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 2rem;
+
+    color: var(--dark);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.12);
+
+    z-index: 20;
+
+    transition: .35s;
+
+}
+
+.panel-close:hover {
+
+    transform: rotate(90deg);
+
+}
+
+
+/* ==========================================
+   INFO CONTENT
+========================================== */
+
+.info-content {
+
+    min-height: 100vh;
+
+    width: min(900px, 90%);
+
+    margin: auto;
+
+    padding:
+        140px 0
+        100px;
+
+    display: none;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+}
+
+.info-content.active {
+
+    display: flex;
+
+    animation: panelReveal .8s ease;
+
+}
+
+
+/* ==========================================
+   PANEL TYPOGRAPHY
+========================================== */
+
+.info-number {
+
+    position: absolute;
+
+    top: 80px;
+
+    right: 0;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 8rem;
+
+    color: rgba(180,130,65,.08);
+
+    line-height: 1;
+
+}
+
+.info-eyebrow {
+
+    font-family: "Cinzel", serif;
+
+    text-transform: uppercase;
+
+    letter-spacing: .3rem;
+
+    font-size: .8rem;
+
+    color: var(--secondary);
+
+    margin-bottom: 15px;
+
+}
+
+.info-content h2 {
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    line-height: .9;
+
+    color: var(--dark);
+
+}
+
+.info-divider {
+
+    width: 100px;
+
+    height: 2px;
+
+    background: var(--secondary);
+
+    margin: 35px 0;
+
+}
+
+
+/* ==========================================
+   STORY
+========================================== */
+
+.story-text {
+
+    max-width: 720px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.6rem;
+
+    line-height: 1.7;
+
+    color: #654631;
+
+    margin-bottom: 25px;
+
+}
+
+.story-ending {
+
+    font-style: italic;
+
+    color: #8a5b33;
+
+}
+
+
+/* ==========================================
+   VENUE
+========================================== */
+
+.venue-content h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3rem;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+
+}
+
+.venue-address {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.5rem;
+
+    line-height: 1.6;
+
+    color: #6d4b34;
+
+}
+
+
+/* ==========================================
+   VENUE DETAILS
+========================================== */
+
+.venue-details {
+
+    display: flex;
+
+    gap: 70px;
+
+    margin: 45px 0;
+
+}
+
+.venue-details div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.venue-details span {
+
+    font-family: "Cinzel", serif;
+
+    font-size: .7rem;
+
+    letter-spacing: .2rem;
+
+    color: var(--secondary);
+
+}
+
+.venue-details strong {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.4rem;
+
+    font-weight: 500;
+
+}
+
+
+/* ==========================================
+   MAP
+========================================== */
+
+/* ==========================================
+   GOOGLE MAP
+========================================== */
+
+.venue-map {
+
+    width: 100%;
+
+    height: 320px;
+
+    margin-top: 35px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background: #eee;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .10);
+
+    border: 6px solid rgba(255, 255, 255, .75);
+
+}
+
+.venue-map iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+    display: block;
+
+    filter: saturate(.75) sepia(.08);
+
+}
+
+.map-placeholder {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+.map-placeholder span {
+
+    font-size: 3rem;
+
+}
+
+.map-placeholder p {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.8rem;
+
+    margin-top: 10px;
+
+}
+
+.map-placeholder small {
+
+    color: #80634c;
+
+}
+
+
+/* ==========================================
+   MAP BUTTON
+========================================== */
+
+.map-button {
+
+    align-self: flex-start;
+
+    margin-top: 25px;
+
+    padding: 16px 28px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #8a5b33;
+
+    transition: .35s;
+
+}
+
+.map-button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(100,60,30,.25);
+
+}
+
+
+/* ==========================================
+   PANEL ANIMATION
+========================================== */
+
+@keyframes panelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   WEDDING LAUNCH SCREEN
+========================================== */
+
+.launch-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 10000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffdf8 0%,
+            #f8efe3 65%,
+            #f1e5d6 100%
+        );
+
+    overflow: hidden;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.launch-content {
+
+    position: relative;
+
+    width: min(80px, 28vw);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.launch-image {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    animation:
+        launchImageIn 1s
+        cubic-bezier(.22,1,.36,1)
+        forwards;
+
+    filter:
+        drop-shadow(
+            0 25px 45px
+            rgba(74,44,24,.15)
+        );
+
+}
+
+
+/* ==========================================
+   SOFT GLOW
+========================================== */
+
+.launch-glow {
+
+    position: absolute;
+
+    width: 115%;
+    height: 115%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(180, 55, 70, .25) 0%,
+        rgba(210, 90, 105, .16) 30%,
+        rgba(245, 170, 175, .10) 50%,
+            transparent 72%
+        );
+
+    filter: blur(22px);
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation:
+        launchGlow 0.1s ease-in-out infinite;
+
+}
+
+
+/* ==========================================
+   INITIALS
+========================================== */
+
+.launch-text {
+
+    position: absolute;
+    z-index: 5;
+
+    bottom: -55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: none;
+
+    white-space: nowrap;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    font-style: italic;
+
+    letter-spacing: .08rem;
+
+    color: #8a5b33;
+
+    opacity: 0;
+
+    animation:
+        launchTextIn .5s ease .3s forwards;
+
+}
+
+
+/* ==========================================
+   EXIT STATE
+========================================== */
+
+.launch-screen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================
+   IMAGE ANIMATION
+========================================== */
+
+@keyframes launchImageIn {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(.88)
+            translateY(20px);
+
+    }
+
+    40% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   GLOW ANIMATION
+========================================== */
+
+@keyframes launchGlow {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(.92);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.04);
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(.92);
+    }
+
+}
+
+
+/* ==========================================
+   TEXT ANIMATION
+========================================== */
+
+@keyframes launchTextIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* ==========================================
+   OUR STORY
+========================================== */
+
+.story-panel {
+
+    width: min(1100px, 92%);
+
+}
+
+
+/* ==========================================
+   STORY HEADER
+========================================== */
+
+.story-header {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 100px;
+
+}
+
+.story-header h2 {
+
+    margin-top: 10px;
+
+}
+
+.story-intro {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.5rem;
+
+    line-height: 1.7;
+
+    color: #76553d;
+
+}
+
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.story-timeline {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 100px;
+
+}
+
+
+/* vertical line */
+
+.story-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(180,120,60,.45) 5%,
+            rgba(180,120,60,.45) 95%,
+            transparent
+        );
+
+    transform: translateX(-50%);
+
+}
+
+
+/* ==========================================
+   STORY ITEM
+========================================== */
+
+.story-item {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        80px
+        1fr;
+
+    align-items: center;
+
+    position: relative;
+
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.story-image {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: #eee4d7;
+
+    box-shadow:
+        0 20px 50px
+        rgba(70,40,20,.12);
+
+    transform:
+        rotate(-1.5deg);
+
+    transition:
+        transform .6s ease,
+        box-shadow .6s ease;
+
+}
+
+.story-item:hover .story-image {
+
+    transform:
+        rotate(0deg)
+        scale(1.025);
+
+    box-shadow:
+        0 30px 65px
+        rgba(70,40,20,.18);
+
+}
+
+.story-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s ease;
+
+}
+
+.story-item:hover .story-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+/* ==========================================
+   REVERSE
+========================================== */
+
+.story-item.reverse .story-image {
+
+    grid-column: 3;
+
+    grid-row: 1;
+
+    transform:
+        rotate(1.5deg);
+
+}
+
+.story-item.reverse:hover .story-image {
+
+    transform:
+        rotate(0deg)
+        scale(1.025);
+
+}
+
+.story-item.reverse .story-content {
+
+    grid-column: 1;
+
+    grid-row: 1;
+
+}
+
+
+/* ==========================================
+   CONNECTOR
+========================================== */
+
+.story-connector {
+
+    grid-column: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 3;
+
+}
+
+.story-connector span {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #fffaf4;
+
+    border:
+        1px solid
+        rgba(180,120,60,.35);
+
+    color:
+        #b56b58;
+
+    font-size: 1.2rem;
+
+    box-shadow:
+        0 8px 25px
+        rgba(70,40,20,.12);
+
+}
+
+
+/* ==========================================
+   STORY CONTENT
+========================================== */
+
+.story-content {
+
+    padding: 0 45px;
+
+}
+
+.story-number {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: .75rem;
+
+    letter-spacing: .15rem;
+
+    color: #c79a52;
+
+}
+
+.story-label {
+
+    margin-top: 12px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: .65rem;
+
+    letter-spacing: .18rem;
+
+    color: #a57a55;
+
+}
+
+.story-content h3 {
+
+    margin:
+        8px 0 12px;
+
+    font-size: 2.8rem;
+
+    font-weight: 500;
+
+    color: #4a2c18;
+
+}
+
+.story-content > p:last-child {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.3rem;
+
+    line-height: 1.65;
+
+    color: #76553d;
+
+}
+
+
+/* ==========================================
+   FINAL STORY
+========================================== */
+
+.final-story .story-connector span {
+
+    background:
+        #9f463c;
+
+    color:
+        white;
+
+    border-color:
+        #9f463c;
+
+}
+
+
+/* ==========================================
+   ENDING
+========================================== */
+
+.story-ending {
+
+    margin-top: 100px;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    color: #9f6a4c;
+
+}
+
+.story-ending p {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.5rem;
+
+    font-style: italic;
+
+}
+
+.story-ending span {
+
+    color: #b56b58;
+
+}
+
+/* ==========================================
+   HERO POEM
+========================================== */
+
+.hero-poem {
+
+    width: min(620px, 90vw);
+
+    margin: 45px auto 0;
+
+    padding: 30px 35px;
+
+    text-align: center;
+
+    position: relative;
+
+}
+
+
+/* subtle watercolor/paper atmosphere */
+
+.hero-poem::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 250, 240, .65),
+            transparent 70%
+        );
+
+    filter: blur(8px);
+
+    z-index: -1;
+
+}
+
+
+/* ==========================================
+   POEM
+========================================== */
+
+.hero-poem {
+
+    width: min(390px, 82vw);
+    margin: 25px auto 0;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.poem-text p {
+
+    margin: 0 0 12px;
+
+}
+
+.poem-ornament {
+
+    margin: 5px 0;
+
+    font-size: 1.1rem;
+
+}
+
+
+/* ==========================================
+   AUTHOR
+========================================== */
+
+.poem-author {
+
+    margin-top: 15px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    color: #9a6a52;
+
+    letter-spacing: .05rem;
+
+}

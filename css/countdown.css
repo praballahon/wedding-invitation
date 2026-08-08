@@ -1,0 +1,290 @@
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown-section {
+
+    position: relative;
+
+    padding: 90px 20px 110px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================
+   EYEBROW
+========================================== */
+
+.countdown-eyebrow {
+
+    margin-bottom: 12px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: .72rem;
+
+    letter-spacing: .28rem;
+
+    text-transform: uppercase;
+
+    color: #a47752;
+
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.countdown-title {
+
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(2rem, 5vw, 3.2rem);
+
+    font-weight: 500;
+
+    font-style: italic;
+
+    color: #4a2c18;
+
+}
+
+
+/* ==========================================
+   ORNAMENT
+========================================== */
+
+.countdown-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin: 25px auto 35px;
+
+}
+
+.countdown-ornament span {
+
+    width: 55px;
+
+    height: 1px;
+
+    background:
+        rgba(165, 119, 82, .35);
+
+}
+
+.countdown-ornament i {
+
+    font-style: normal;
+
+    font-size: 1rem;
+
+    color: #a75d4d;
+
+}
+
+
+/* ==========================================
+   TIMER
+========================================== */
+
+.countdown-timer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: clamp(18px, 4vw, 55px);
+
+}
+
+
+/* ==========================================
+   NUMBER
+========================================== */
+
+.countdown-number {
+
+    min-width: 70px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(2.8rem, 7vw, 5rem);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #7e4938;
+
+    font-variant-numeric:
+        tabular-nums;
+
+}
+
+
+/* ==========================================
+   LABEL
+========================================== */
+
+.countdown-label {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: .58rem;
+
+    letter-spacing: .18rem;
+
+    color: #9a765e;
+
+}
+
+
+/* ==========================================
+   SEPARATOR
+========================================== */
+
+.countdown-separator {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+
+    color: #bd8b62;
+
+    opacity: .6;
+
+    margin-top: 10px;
+
+}
+
+
+/* ==========================================
+   DATE
+========================================== */
+
+.countdown-date {
+
+    margin-top: 40px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.25rem;
+
+    color: #76553d;
+
+}
+
+.countdown-date strong {
+
+    font-weight: 500;
+
+    color: #70402f;
+
+}
+
+
+/* ==========================================
+   COMPLETE STATE
+========================================== */
+
+.countdown-complete {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+
+    font-style: italic;
+
+    color: #8d4c42;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .countdown-section {
+
+        padding:
+            70px
+            15px
+            80px;
+
+    }
+
+    .countdown-timer {
+
+        gap: 8px;
+
+    }
+
+    .countdown-number {
+
+        min-width: 55px;
+
+        font-size: 2.5rem;
+
+    }
+
+    .countdown-label {
+
+        font-size: .48rem;
+
+        letter-spacing: .1rem;
+
+    }
+
+    .countdown-separator {
+
+        font-size: 1.3rem;
+
+        margin-top: 5px;
+
+    }
+
+    .countdown-date {
+
+        font-size: 1.1rem;
+
+    }
+
+}

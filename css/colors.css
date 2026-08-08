@@ -1,0 +1,19 @@
+:root {
+  --color-gold: #b98222;
+  --color-gold-soft: #d8b45a;
+  --color-ivory: #fbf3df;
+  --color-parchment: #f7edd5;
+  --color-parchment-deep: #ead9b8;
+  --color-green: #526b2f;
+  --color-green-deep: #2f421e;
+  --color-leaf: #7c943f;
+  --color-red: #b9422e;
+  --color-text: #5a351b;
+  --color-muted: #7a654e;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-line: rgba(82, 107, 47, 0.24);
+  --color-glass: rgba(251, 243, 223, 0.84);
+  --shadow-soft: 0 22px 70px rgba(90, 53, 27, 0.12);
+  --shadow-gold: 0 18px 44px rgba(185, 130, 34, 0.24);
+}

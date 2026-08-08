@@ -1,0 +1,484 @@
+/* ==========================================
+   GLOBAL ANIMATIONS
+========================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* ==========================================
+   FLOATING
+========================================== */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes floatSlow {
+
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+}
+
+/* ==========================================
+   HANGING FLOWERS
+========================================== */
+
+@keyframes swing {
+
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+
+}
+
+.top-flowers {
+
+    transform-origin: top center;
+
+    animation: swing 8s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   LEAVES
+========================================== */
+
+.left-leaf {
+
+    animation: floatSlow 7s ease-in-out infinite;
+
+}
+
+.right-decoration {
+
+    animation: float 6s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero-content {
+
+    animation: fadeUp 1.3s ease;
+
+}
+
+.subtitle {
+
+    animation: fadeIn 2s ease;
+
+}
+
+.tagline {
+
+    animation: fadeIn 2.6s ease;
+
+}
+
+.hero-info {
+
+    animation: fadeUp 2.2s ease;
+
+}
+
+/* ==========================================
+   SCROLL INDICATOR
+========================================== */
+
+@keyframes scrollPulse {
+
+    0% {
+
+        opacity: .2;
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: translateY(10px);
+
+    }
+
+    100% {
+
+        opacity: .2;
+
+        transform: translateY(20px);
+
+    }
+
+}
+
+.scroll-down::after {
+
+    animation: scrollPulse 2s infinite;
+
+}
+
+/* ==========================================
+   GOLDEN PARTICLES
+========================================== */
+
+.particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+.particles::before,
+
+.particles::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: rgba(210,170,90,.7);
+
+    box-shadow:
+        80px 120px rgba(210,170,90,.5),
+        240px 60px rgba(210,170,90,.4),
+        420px 200px rgba(210,170,90,.6),
+        600px 80px rgba(210,170,90,.5),
+        800px 300px rgba(210,170,90,.6),
+        1000px 120px rgba(210,170,90,.4);
+
+    animation: particleMove 18s linear infinite;
+
+}
+
+.particles::after {
+
+    animation-duration: 24s;
+
+    opacity: .5;
+
+}
+
+@keyframes particleMove {
+
+    from {
+
+        transform: translateY(100vh);
+
+    }
+
+    to {
+
+        transform: translateY(-120vh);
+
+    }
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+
+    animation: float 5s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.expand-btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.expand-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -120%;
+
+    top: 0;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+
+    transition: .8s;
+
+}
+
+.expand-btn:hover::before {
+
+    left: 140%;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.event-card {
+
+    transition:
+        transform .45s,
+        box-shadow .45s;
+
+}
+
+.event-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.01);
+
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.event-right img {
+
+    transition:
+        transform 1.4s ease,
+        filter .6s;
+
+}
+
+.event-card:hover img {
+
+    transform: scale(1.08);
+
+    filter: brightness(1.05);
+
+}
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline div {
+
+    transition: .35s;
+
+}
+
+.timeline div:hover {
+
+    transform:
+        translateX(8px)
+        scale(1.02);
+
+}
+
+/* ==========================================
+   HEART
+========================================== */
+
+@keyframes heartbeat {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    20% {
+
+        transform: scale(1.15);
+
+    }
+
+    40% {
+
+        transform: scale(1);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+.heart {
+
+    animation: heartbeat 2s infinite;
+
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* ==========================================
+   HOVER GLOW
+========================================== */
+
+.event-card::before {
+
+    transition: .5s;
+
+}
+
+.event-card:hover::before {
+
+    filter: blur(12px);
+
+}
+
+/* ==========================================
+   SMOOTH PAGE LOAD
+========================================== */
+
+body {
+
+    animation: fadeIn .8s ease;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes floatDown {
+        0% {
+            transform: translate3d(0, -20px, 0) rotate(0deg);
+        }
+        100% {
+            transform: translate3d(var(--drift, 20px), 110vh, 0) rotate(320deg);
+        }
+    }
+
+    .particle-layer {
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .gold-particle,
+    .flower-petal {
+        position: absolute;
+        top: -16px;
+        opacity: 0.72;
+        animation-name: floatDown;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .gold-particle {
+        width: 4px;
+        height: 4px;
+        background: var(--color-gold);
+        border-radius: 50%;
+        box-shadow: 0 0 18px rgba(201, 162, 39, 0.72);
+    }
+
+    .flower-petal {
+        width: 9px;
+        height: 14px;
+        background: rgba(185, 130, 34, 0.34);
+        border-radius: 80% 10% 80% 10%;
+    }
+}
