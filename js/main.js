@@ -308,6 +308,6 @@ if (launchScreen) {
 
         document.body.style.overflow = "";
 
-    }, 1700);
+    }, 2500);
 
 }
