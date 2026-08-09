@@ -182,6 +182,9 @@ const panelClose = document.getElementById("panelClose");
 
 const menuItems = document.querySelectorAll(".menu-item");
 
+const btnVenueWedding = document.getElementById("btnVenueWedding");
+const btnVenueReception = document.getElementById("btnVenueReception");
+
 const infoContents =
     document.querySelectorAll(".info-content");
 
@@ -277,6 +280,86 @@ document.addEventListener("keydown", event => {
     infoPanel.classList.remove("open");
 
     document.body.style.overflow = "";
+
+});
+
+btnVenueWedding.addEventListener("click", () => {
+
+    const panelName =
+            btnVenueWedding.dataset.panel;
+
+        const target =
+            document.getElementById(
+                panelName + "Panel"
+            );
+
+        if (!target) return;
+
+
+        // Close menu
+
+        menuOverlay.classList.remove("open");
+
+
+        // Hide all content
+
+        infoContents.forEach(content => {
+
+            content.classList.remove("active");
+
+        });
+
+
+        // Show selected content
+
+        target.classList.add("active");
+
+
+        // Open information panel
+
+        infoPanel.classList.add("open");
+
+        document.body.style.overflow = "hidden";
+
+});
+
+btnVenueReception.addEventListener("click", () => {
+
+    const panelName =
+            btnVenueReception.dataset.panel;
+
+        const target =
+            document.getElementById(
+                panelName + "Panel"
+            );
+
+        if (!target) return;
+
+
+        // Close menu
+
+        menuOverlay.classList.remove("open");
+
+
+        // Hide all content
+
+        infoContents.forEach(content => {
+
+            content.classList.remove("active");
+
+        });
+
+
+        // Show selected content
+
+        target.classList.add("active");
+
+
+        // Open information panel
+
+        infoPanel.classList.add("open");
+
+        document.body.style.overflow = "hidden";
 
 });
 

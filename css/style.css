@@ -466,7 +466,7 @@ img {
 
     transition:.4s;
 
-    z-index:999;
+    z-index:1101;
 
 }
 
@@ -1866,4 +1866,61 @@ img {
 
     letter-spacing: .05rem;
 
+}
+
+.venue-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    width: fit-content;
+
+    margin: 25px auto 5px;
+
+    padding: 7px 16px;
+
+    border: 1px solid rgba(141, 76, 66, 0.4);
+    border-radius: 20px;
+
+    background: transparent;
+
+    color: #8d4c42;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.venue-link span {
+
+    font-family: sans-serif;
+
+    font-size: .75rem;
+
+    transition:
+        transform .3s ease;
+}
+
+.venue-link:hover {
+
+    background: rgba(141, 76, 66, 0.06);
+
+    border-color: rgba(141, 76, 66, 0.65);
+
+    color: #6f3831;
+
+    transform: translateY(-1px);
+}
+
+.venue-link:hover span {
+
+    transform:
+        translate(2px, -2px);
+}
+
+.venue-link:active {
+
+    transform: scale(.97);
 }
