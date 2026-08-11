@@ -459,3 +459,10 @@
         font-size: 12px;
     }
 }
+
+html.envelope-active,
+body.envelope-active {
+    overflow: hidden;
+    height: 100%;
+    overscroll-behavior: none;
+}

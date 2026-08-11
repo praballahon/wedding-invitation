@@ -2,14 +2,14 @@
    ENVELOPE OPENING + MUSIC
 ========================================================= */
 
-const envelopeScreen =
-    document.getElementById("envelope-screen");
+const envelopeScreen = document.getElementById("envelope-screen");
 
-const openInvitation =
-    document.getElementById("open-invitation");
+const openInvitation = document.getElementById("open-invitation");
 
-const bgMusic =
-    document.getElementById("bg-music");
+const bgMusic = document.getElementById("bg-music");
+
+document.documentElement.classList.add("envelope-active");
+document.body.classList.add("envelope-active");
 
 const musicBtn = document.createElement("button");
 musicBtn.className = "music-btn";
@@ -92,15 +92,12 @@ openInvitation.addEventListener("click", function () {
     /* ---------------------------------------------
        Remove launch screen
     --------------------------------------------- */
-
     setTimeout(function () {
-
         envelopeScreen.classList.add("hide");
+        document.body.classList.add("invitation-opened");
 
-        document.body.classList.add(
-            "invitation-opened"
-        );
-
+        document.documentElement.classList.remove("envelope-active");
+        document.body.classList.remove("envelope-active");
     }, 1800);
 
 });
