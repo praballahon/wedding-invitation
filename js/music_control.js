@@ -7,6 +7,8 @@
     musicBtn.innerHTML = "♪";
     document.body.appendChild(musicBtn);
 
+    const hero = document.getElementById("hero-content-id");
+
     let playing = false;
 
     const audio = new Audio("assets/audio/theme2_alokhua.mp3");
@@ -87,12 +89,11 @@
 
     function startMusic() {
         playMusic();
-        document.removeEventListener("pointerdown", startMusic);
-        document.removeEventListener("touchstart", startMusic);
+        //document.removeEventListener("pointerdown", startMusic);
     }
 
-    document.addEventListener("pointerdown", startMusic);
-    document.addEventListener("touchstart", startMusic);
+    hero.addEventListener("pointerdown", startMusic, { once: true });
+    //document.addEventListener("pointerdown", startMusic);
   }
 
   window.WeddingSite = window.WeddingSite || {};
