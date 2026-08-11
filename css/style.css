@@ -28,6 +28,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 100%;
+    zoom: 0.8;
 }
 
 /* ==========================================
@@ -188,7 +189,7 @@ body::after {
 
 .right-decoration {
 
-    position: fixed;
+    position: absolute;
 
     bottom: 1vh;
 
@@ -1380,7 +1381,7 @@ img {
 
     from {
         opacity: 0;
-        transform: translateX(-50%) translateY(12px);
+        transform: translateX(-50%);
     }
 
     to {
