@@ -1,4 +1,4 @@
-const CACHE_NAME = "wedding-invitation-v31";
+const CACHE_NAME = "wedding-invitation-v35";
 const CORE_ASSETS = [
   "index.html",
 

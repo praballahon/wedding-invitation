@@ -291,7 +291,18 @@
     letter-spacing: 1px;
 }
 
+.open-text-button {
+    background: transparent;
+    border: none;
+    padding: 0;
 
+    color: #f9efe2;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
 /* =========================================================
    OPEN INVITATION BUTTON
 ========================================================= */

@@ -4,7 +4,7 @@
 
 const envelopeScreen = document.getElementById("envelope-screen");
 
-const openInvitation = document.getElementById("open-invitation");
+const openInvitation = document.getElementById("open-invite");
 
 const bgMusic = document.getElementById("bg-music");
 
