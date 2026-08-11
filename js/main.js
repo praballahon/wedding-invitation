@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //window.WeddingSite.countdown.init();
     window.WeddingSite.animations.initReveal();
     window.WeddingSite.animations.createParticles();
-    window.WeddingSite.music.init();
+    //window.WeddingSite.music.init();
   });
 
 // ==========================================

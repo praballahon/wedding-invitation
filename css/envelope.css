@@ -1,0 +1,461 @@
+/* =========================================================
+   ENVELOPE LAUNCH SCREEN
+========================================================= */
+
+#envelope-screen {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffdf8 0%,
+            #f8f1e6 55%,
+            #eee1cf 100%
+        );
+
+    z-index: 99999;
+
+    overflow: hidden;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+/* =========================================================
+   ENVELOPE WRAPPER
+========================================================= */
+
+.envelope-wrapper {
+    position: relative;
+
+    width: min(82vw, 420px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    perspective: 1200px;
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1.55 / 1;
+
+    transform-style: preserve-3d;
+
+    filter:
+        drop-shadow(
+            0 20px 30px rgba(80, 50, 20, 0.18)
+        );
+
+    animation:
+        envelopeFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ENVELOPE BACK
+========================================================= */
+
+.envelope-back {
+    position: absolute;
+
+    inset: 0;
+
+    background: #f7ead7;
+
+    border: 1px solid rgba(150, 110, 60, 0.35);
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 0 30px rgba(130, 90, 40, 0.06);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   INVITATION CARD
+========================================================= */
+
+.invitation-card {
+    position: absolute;
+
+    left: 7%;
+    bottom: 5%;
+
+    width: 86%;
+    height: 90%;
+
+    background: #fffdf8;
+
+    border: 1px solid rgba(160, 120, 70, 0.35);
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 8px 25px rgba(70, 45, 20, 0.15);
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    transform:
+        translateY(0)
+        scale(0.96);
+
+    transition:
+        transform 1.2s cubic-bezier(.2, .8, .2, 1),
+        box-shadow 1s ease;
+}
+
+
+/* =========================================================
+   SMALL INVITATION IMAGE
+========================================================= */
+
+.envelope-invitation-image {
+    width: 55%;
+    height: 55%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.envelope-card-text {
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    color: #72542f;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ENVELOPE FRONT
+========================================================= */
+
+.envelope-front {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 62%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f4e4ce,
+            #ead4b6
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            50% 58%,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+
+    border-radius: 0 0 5px 5px;
+
+    z-index: 4;
+
+    border-bottom:
+        1px solid rgba(130, 90, 40, 0.25);
+}
+
+
+/* =========================================================
+   ENVELOPE FLAP
+========================================================= */
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 65%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8ead6,
+            #ead5b8
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    transform-origin: top center;
+
+    transform: rotateX(0deg);
+
+    backface-visibility: hidden;
+
+    z-index: 5;
+
+    transition:
+        transform 1.1s cubic-bezier(.2, .8, .2, 1);
+}
+
+
+/* =========================================================
+   WAX SEAL
+========================================================= */
+
+.wax-seal {
+    position: absolute;
+
+    left: 50%;
+    top: 56%;
+
+    width: 54px;
+    height: 54px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #d8a85b,
+            #ae7931 65%,
+            #8b5d25
+        );
+
+    border:
+        2px solid rgba(255, 235, 190, 0.6);
+
+    box-shadow:
+        0 4px 12px rgba(80, 45, 10, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.4);
+
+    color: #fff7e7;
+
+    z-index: 6;
+
+    transition:
+        opacity .5s ease,
+        transform .8s ease;
+}
+
+.wax-seal span {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   OPEN INVITATION BUTTON
+========================================================= */
+
+#open-invitation {
+    margin-top: 38px;
+
+    padding: 13px 28px;
+
+    border:
+        1px solid rgba(135, 95, 40, 0.5);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 252, 245, 0.75);
+
+    color: #72542f;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 20px rgba(90, 60, 25, 0.12);
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+#open-invitation:hover {
+    transform: translateY(-2px);
+
+    background: #fffaf0;
+
+    box-shadow:
+        0 8px 25px rgba(90, 60, 25, 0.18);
+}
+
+#open-invitation:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================================
+   OPENING STATE
+========================================================= */
+
+#envelope-screen.opening .envelope {
+    animation: none;
+}
+
+
+/* Open flap */
+
+#envelope-screen.opening .envelope-flap {
+    transform: rotateX(-180deg);
+}
+
+
+/* Move invitation card upward */
+
+#envelope-screen.opening .invitation-card {
+    transform:
+        translateY(-70%)
+        scale(1);
+
+    box-shadow:
+        0 20px 40px rgba(70, 45, 20, 0.18);
+
+    transition-delay: .35s;
+}
+
+
+/* Hide seal */
+
+#envelope-screen.opening .wax-seal {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.6);
+
+    transition-delay: .15s;
+}
+
+
+/* Hide button */
+
+#envelope-screen.opening #open-invitation {
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+    pointer-events: none;
+
+    transition:
+        opacity .4s ease,
+        transform .4s ease;
+}
+
+
+/* =========================================================
+   HIDE ENVELOPE SCREEN
+========================================================= */
+
+#envelope-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FLOATING ANIMATION
+========================================================= */
+
+@keyframes envelopeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .envelope-wrapper {
+        width: 82vw;
+    }
+
+    .wax-seal {
+        width: 48px;
+        height: 48px;
+    }
+
+    .envelope-invitation-image {
+        width: 60%;
+        height: 60%;
+    }
+
+    #open-invitation {
+        margin-top: 32px;
+
+        padding: 12px 24px;
+
+        font-size: 12px;
+    }
+}

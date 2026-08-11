@@ -37,15 +37,68 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/envelope.css">
 
 </head>
 
 <body>
 
+    <!-- =========================================================
+     ENVELOPE LAUNCH SCREEN
+========================================================= -->
+
+    <div id="envelope-screen">
+
+        <div class="envelope-wrapper">
+
+            <div class="envelope">
+
+                <!-- Envelope back -->
+                <div class="envelope-back"></div>
+
+                <!-- Small invitation image/card -->
+                <div class="invitation-card">
+                    <img
+                        src="assets/images/launch-image.png"
+                        alt="Wedding invitation"
+                        class="envelope-invitation-image"
+                    >
+
+                    <div class="envelope-card-text">
+                        𓂃 ࣪˖ ִֶָ🌸 Two Hearts, One Story 🌸 ࣪˖ ִֶָ𓂃
+                    </div>
+                </div>
+
+                <!-- Envelope front -->
+                <div class="envelope-front"></div>
+
+                <!-- Envelope flap -->
+                <div class="envelope-flap"></div>
+
+                <!-- Wax seal -->
+                <div class="wax-seal">
+                    <span>A · P</span>
+                </div>
+
+            </div>
+
+            <!-- Open button -->
+            <button id="open-invitation" type="button">
+                Open Invitation
+            </button>
+
+        </div>
+
+    </div>
+
+    <audio id="bg-music" loop preload="auto">
+    <source src="assets/audio/theme2_alokhua.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- ==================================== -->
     <!-- Wedding Invitation Launch Screen -->
     <!-- ==================================== -->
-
+    <!--
     <div class="launch-screen" id="launchScreen">
 
         <div class="launch-content">
@@ -65,6 +118,7 @@
         </div>
 
     </div>
+    -->
 
     <!-- ==================================== -->
     <!-- Background Decoration -->
@@ -889,7 +943,7 @@
 
     <!-- Scripts -->
     <script src="js/animations.js"></script>
-    <script src="js/music_control.js"></script>
+    <!--<script src="js/music_control.js"></script>-->
     <script src="js/main.js"></script>
 
     <script src="js/accordion.js"></script>
@@ -898,6 +952,7 @@
     <!--<script src="js/music.js"></script>-->
     <script src="js/countdown.js"></script>
     <script src="js/event-mode.js"></script>
+    <script src="js/envelope.js"></script>
 
 </body>
 

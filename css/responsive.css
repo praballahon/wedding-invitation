@@ -587,6 +587,16 @@
     .venue-link:active {
         transform: scale(.97);
     }
+
+    .envelope-invitation-image {
+        width: 52%;
+        height: 52%;
+    }
+
+    .envelope-card-text {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
 }
 
 
