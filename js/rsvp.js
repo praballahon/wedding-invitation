@@ -43,8 +43,9 @@ const rsvpButtonText =
  
 const rsvpStatus =
     document.getElementById("rsvp-status");
- 
- 
+
+let attendance_set = false;
+
 /* ==========================================
    EVENT
 ========================================== */
@@ -163,6 +164,7 @@ if (rsvpAttendance) {
         function () {
  
             if (this.value === "No") {
+                attendance_set = false;
  
                 guestCountGroup.style.display = "none";
                 eventTypeGroup.style.display = "none";
@@ -171,6 +173,7 @@ if (rsvpAttendance) {
                 rsvpEventType.value = "";
  
             } else {
+                attendance_set = true;
  
                 guestCountGroup.style.display = "flex";
                 eventTypeGroup.style.display = "flex";
@@ -268,12 +271,11 @@ if (rsvpForm) {
                     "Confirm";
  
  
-                // Show success
-                if(rsvpAttendance.value === "No") {
-                    rsvpStatus.textContent = "Sad to know you are not coming.";
+                if(attendance_set) {
+                    rsvpStatus.textContent = "Saved. Happy to know your coming ❤️";
                 }
                 else {
-                    rsvpStatus.textContent = "Saved. Happy to know your coming ❤️";
+                    rsvpStatus.textContent = "Sad to know you are not coming 😔";
                 }
 
                 // Close popup
@@ -287,7 +289,7 @@ if (rsvpForm) {
                             "";
  
                     },
-                    3000
+                    4000
                 );
  
  
