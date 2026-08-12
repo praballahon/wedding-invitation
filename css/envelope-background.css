@@ -102,7 +102,7 @@
 
 .leaf-1 {
     left: calc(50% + (min(72vw, 320px)/2));
-    top: 30%;
+    top: 20%;
     z-index: 2;
 
     --rotation:-10deg;
@@ -113,13 +113,20 @@
 
 .leaf-2 {
     left: calc(50% - (min(72vw, 320px)));
-    top: 38%;
+    top: 30%;
     z-index: 5;
  
     --rotation:-25deg;
     animation:
         launchLeafFloat
         8s ease-in-out infinite;
+}
+
+@media (max-width: 600px) {
+
+    .launch-leaf {
+        width: min(20vw, 80px);
+    }
 }
  
 @keyframes launchLeafFloat {
