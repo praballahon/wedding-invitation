@@ -1,6 +1,7 @@
-const CACHE_NAME = "wedding-invitation-v49";
+const CACHE_NAME = "wedding-invitation-v50";
 const CORE_ASSETS = [
   "index.html",
+  "reception/index.html",
 
   "css/style.css",
   "css/responsive.css",
@@ -11,6 +12,7 @@ const CORE_ASSETS = [
   "css/colors.css",
   "css/envelope.css",
   "css/envelope-background..css",
+  "css/rsvp.css",
 
   "js/main.js",
   "js/countdown.js",
@@ -19,6 +21,9 @@ const CORE_ASSETS = [
   "js/music_control.js",
   "js/scroll.js",
   "js/envelope.js",
+  "js/rsvp.js",
+
+  "reception/js/rsvp_reception.js",
 
   "assets/audio/theme2_alokhua.mp3",
 
