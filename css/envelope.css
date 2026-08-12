@@ -449,7 +449,7 @@
 @media (max-width: 600px) {
 
     .envelope-wrapper {
-        width: 82vw;
+        width: min(65vw, 300px);
     }
 
     .wax-seal {
