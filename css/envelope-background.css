@@ -52,7 +52,7 @@
 }
  
 .flower-1 {
-    right: calc(50% - (min(62vw, 220px)));
+    right: calc(50% - (min(72vw, 320px)/2));
     top: 30%;
     z-index: 2;
  
@@ -65,7 +65,7 @@
 }
  
 .flower-2 {
-    left: calc(50% - (min(62vw, 220px)));
+    left: calc(50% - (min(72vw, 320px)/2));
     bottom: 30%;
     z-index: 2;
  
@@ -99,9 +99,9 @@
  
     opacity: 0.6;
 }
- 
+
 .leaf-1 {
-    left: calc(50% + (min(62vw, 220px)));
+    left: calc(50% + (min(72vw, 320px)/2));
     top: 30%;
     z-index: 2;
 
@@ -112,7 +112,7 @@
 }
 
 .leaf-2 {
-    right: calc(50% + (min(62vw, 220px) - 30px));
+    left: calc(50% - (min(72vw, 320px)));
     top: 38%;
     z-index: 5;
  

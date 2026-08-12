@@ -38,7 +38,7 @@
 .envelope-wrapper {
     position: relative;
 
-    width: min(82vw, 420px);
+    width: min(72vw, 320px);
 
     display: flex;
     flex-direction: column;
