@@ -194,7 +194,7 @@ if (rsvpForm) {
             rsvpSubmit.disabled = true;
  
             rsvpButtonText.textContent =
-                "Submitting...";
+                "Submitting... pleeeaaase wait";
  
             rsvpStatus.textContent = "";
  
