@@ -1,4 +1,4 @@
-const CACHE_NAME = "wedding-invitation-v37";
+const CACHE_NAME = "wedding-invitation-v41";
 const CORE_ASSETS = [
   "index.html",
 
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
   "css/cards.css",
   "css/colors.css",
   "css/envelope.css",
+  "css/envelope-background..css",
 
   "js/main.js",
   "js/countdown.js",
@@ -35,6 +36,10 @@ const CORE_ASSETS = [
   "assets/images/love_begin.png"
   "assets/images/proposal.png"
   "assets/images/infinite.png"
+  "assets/images/gamusa_fold.png"
+  "assets/images/leaf_left.png"
+  "assets/images/leaf_right.png"
+  "assets/images/pink_flower.png"
 ];
 
 self.addEventListener("install", (event) => {

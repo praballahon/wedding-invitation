@@ -1,0 +1,203 @@
+.launch-decoration {
+    position: absolute;
+    inset: 0;
+ 
+    overflow: hidden;
+ 
+    pointer-events: none;
+ 
+    z-index: 1;
+}
+ 
+ 
+/* =========================================================
+   GAMUSA
+========================================================= */
+ 
+.launch-gamusa {
+    position: absolute;
+ 
+    width: min(100vw, 700px);
+ 
+    height: auto;
+ 
+    left: 50%;
+    top: 50%;
+ 
+    transform:
+        translate(-50%, -50%)
+        rotate(-3deg);
+ 
+    opacity: 0.6;
+ 
+    z-index: 3;
+ 
+    pointer-events: none;
+ 
+    filter:
+        saturate(0.8)
+        drop-shadow(
+            0 12px 20px rgba(80, 50, 20, 0.08)
+        );
+}
+
+.launch-flower {
+    position: absolute;
+ 
+    z-index: 3;
+ 
+    pointer-events: none;
+ 
+    opacity: 0.65;
+}
+ 
+.flower-1 {
+    right: calc(50% - (min(62vw, 220px)));
+    top: 30%;
+    z-index: 2;
+ 
+    width: min(30vw, 60px);
+    height: auto;
+    rotate: 50deg;
+    animation:
+        launchFlowerFloat
+        6s ease-in-out infinite;
+}
+ 
+.flower-2 {
+    left: calc(50% - (min(62vw, 220px)));
+    bottom: 30%;
+    z-index: 2;
+ 
+    width: min(40vw, 100px);
+    height: auto;
+    animation:
+        launchFlowerFloat
+        4s ease-in-out infinite;
+
+}
+
+@keyframes launchFlowerFloat {
+ 
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+ 
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.launch-leaf {
+    position: absolute;
+ 
+    width: min(40vw, 150px);
+    height: auto;
+ 
+    pointer-events: none;
+ 
+    opacity: 0.6;
+}
+ 
+.leaf-1 {
+    left: calc(50% + (min(62vw, 220px)));
+    top: 30%;
+    z-index: 2;
+
+    --rotation:-10deg;
+    animation:
+        launchLeafFloat
+        4s ease-in-out infinite;
+}
+
+.leaf-2 {
+    right: calc(50% + (min(62vw, 220px) - 30px));
+    top: 38%;
+    z-index: 5;
+ 
+    --rotation:-25deg;
+    animation:
+        launchLeafFloat
+        8s ease-in-out infinite;
+}
+ 
+@keyframes launchLeafFloat {
+ 
+    0%,
+    100% {
+        transform: translateY(0) rotate(var(--rotation)) ;
+    }
+
+    40% {
+        transform: translateY(10px) rotate(var(--rotation));
+    }
+}
+
+.launch-dot {
+    position: absolute;
+ 
+    z-index: 4;
+
+    color: #b88a4b;
+ 
+    font-family: Georgia, serif;
+ 
+    opacity: 0.8;
+ 
+    pointer-events: none;
+ 
+    animation:
+        launchDotFloat
+        4s ease-in-out infinite;
+}
+ 
+.dot-1 {
+    left: calc(50% - 105px);
+    top: 25%;
+    font-size: 55px;
+}
+ 
+.dot-2 {
+    right: calc(50% - 115px);
+    top: 35%;
+    font-size: 40px;
+ 
+    animation-delay: 1s;
+}
+ 
+.dot-3 {
+    left: calc(50% - 120px);
+    bottom: 35%;
+    font-size: 37px;
+}
+ 
+.dot-4 {
+    right: calc(50% - 105px);
+    bottom: 30%;
+    font-size: 34px;
+ 
+    animation-delay: .7s;
+}
+.dot-5 {
+    right: calc(50% + 10px);
+    bottom: 20%;
+    font-size: 31px;
+ 
+    animation-delay: .7s;
+}
+ 
+ 
+@keyframes launchDotFloat {
+ 
+    0%,
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+ 
+    50% {
+        opacity: 0.4;
+        transform: translateY(-5px);
+    }
+}

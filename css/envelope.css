@@ -45,6 +45,7 @@
     align-items: center;
 
     perspective: 1200px;
+    z-index: 10;
 }
 
 

@@ -597,6 +597,10 @@
         font-size: 12px;
         letter-spacing: 1px;
     }
+
+    .launch-leaf {
+        width: 30vw;
+    }
 }
 
 
@@ -682,6 +686,9 @@
 
         width:60vw;
 
+    }
+    .launch-leaf {
+        width: 30vw;
     }
 
 }
