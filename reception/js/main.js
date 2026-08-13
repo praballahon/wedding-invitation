@@ -182,7 +182,7 @@ const panelClose = document.getElementById("panelClose");
 
 const menuItems = document.querySelectorAll(".menu-item");
 
-const btnVenueWedding = document.getElementById("btnVenueWedding");
+//const btnVenueWedding = document.getElementById("btnVenueWedding");
 const btnVenueReception = document.getElementById("btnVenueReception");
 
 const infoContents =
@@ -283,6 +283,7 @@ document.addEventListener("keydown", event => {
 
 });
 
+/*
 btnVenueWedding.addEventListener("click", () => {
         const target =
             document.getElementById(
@@ -318,7 +319,7 @@ btnVenueWedding.addEventListener("click", () => {
         document.body.style.overflow = "hidden";
 
 });
-
+*/
 btnVenueReception.addEventListener("click", () => {
         const target =
             document.getElementById(
