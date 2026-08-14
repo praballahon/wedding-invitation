@@ -389,3 +389,41 @@ if (launchScreen) {
     }, 2500);
 
 }
+
+const storyBtn = document.getElementById("storyExpandBtn");
+ 
+storyBtn.addEventListener("click", () => {
+    const target =document.getElementById("storyPanel");
+
+    if (!target) {
+        console.log("venue panel is null");
+        return;
+    }
+
+
+    // Close menu
+
+    menuOverlay.classList.remove("open");
+
+
+    // Hide all content
+
+    infoContents.forEach(content => {
+
+        content.classList.remove("active");
+
+    });
+
+
+    // Show selected content
+
+    target.classList.add("active");
+
+
+    // Open information panel
+
+    infoPanel.classList.add("open");
+
+    document.body.style.overflow = "hidden";
+});
+ 

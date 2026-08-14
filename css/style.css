@@ -208,7 +208,7 @@ body::after {
 
     top: 30px;
 
-    left: 35px;
+    right: 35px;
 
     width: 72px;
 
@@ -259,7 +259,7 @@ body::after {
 
     top: 30px;
 
-    right: 35px;
+    left: 35px;
 
     width: 72px;
 
@@ -555,7 +555,7 @@ img {
 
     top: 30px;
 
-    right: 35px;
+    left: 35px;
 
     width: 72px;
 
@@ -752,7 +752,7 @@ img {
 
     top: 30px;
 
-    right: 35px;
+    left: 35px;
 
     width: 64px;
 
@@ -1923,4 +1923,95 @@ img {
 .venue-link:active {
 
     transform: scale(.97);
+}
+.story-expand {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+ 
+.story-expand-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+ 
+    padding: 13px 23px;
+ 
+    border: 1px solid rgba(126, 96, 68, 0.35);
+    border-radius: 50px;
+ 
+    background: rgba(255, 252, 247, 0.75);
+ 
+    color: #6f5239;
+ 
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+ 
+    cursor: pointer;
+ 
+    box-shadow:
+        0 5px 18px rgba(90, 60, 35, 0.08);
+ 
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+ 
+/* Arrow circle */
+.story-btn-arrow {
+    width: 25px;
+    height: 25px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    border-radius: 50%;
+ 
+    background: rgba(126, 96, 68, 0.1);
+ 
+    font-size: 17px;
+    line-height: 1;
+ 
+    transition:
+        transform 0.35s ease,
+        background 0.3s ease;
+}
+ 
+/* Hover */
+.story-expand-btn:hover {
+    transform: translateY(-3px);
+ 
+    background: rgba(255, 255, 255, 0.95);
+ 
+    box-shadow:
+        0 9px 25px rgba(90, 60, 35, 0.14);
+}
+ 
+.story-expand-btn:hover .story-btn-arrow {
+    transform: translateY(3px);
+    background: rgba(126, 96, 68, 0.16);
+}
+ 
+/* Subtle attention animation */
+.story-expand-btn {
+    animation: storyButtonFloat 2.8s ease-in-out infinite;
+}
+ 
+@keyframes storyButtonFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+ 
+    50% {
+        transform: translateY(-3px);
+    }
+}
+ 
+/* Stop floating while interacting */
+.story-expand-btn:hover {
+    animation: none;
 }

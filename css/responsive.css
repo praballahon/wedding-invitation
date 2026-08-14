@@ -280,7 +280,7 @@
 
         top: 16px;
 
-        right: 16px;
+        left: 16px;
 
         width: 56px;
 
@@ -318,7 +318,7 @@
 
         top: 16px;
 
-        right: 16px;
+        left: 16px;
 
         width: 56px;
 
@@ -620,7 +620,7 @@
 
     .logo{
 
-        left:16px;
+        right:16px;
 
         top:16px;
 
@@ -634,7 +634,7 @@
 
     .menu-btn{
 
-        right:16px;
+        left:16px;
 
         top:16px;
 
